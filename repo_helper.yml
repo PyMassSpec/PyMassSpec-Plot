@@ -1,0 +1,49 @@
+# Configuration for 'repo_helper' (https://github.com/repo-helper/repo_helper)
+---
+modname: 'PyMassSpec-Plot'
+import_name: 'pymassspec_plot'
+copyright_years: '2020-2021'
+author: 'Dominic Davis-Foster'
+email: 'dominic@davis-foster.co.uk'
+username: 'PyMassSpec'
+assignee: 'domdfcoding'
+primary_conda_channel: 'domdfcoding'
+version: '0.0.0'
+license: 'GPLv2'
+short_desc: 'Plotting extension for PyMassSpec.'
+
+conda_channels:
+ - bioconda
+ - conda-forge
+
+# Versions to run tests for
+python_versions:
+ - 3.6
+ - 3.7
+ - 3.8
+ - 3.9
+ - 3.10-dev
+
+classifiers:
+ - "Development Status :: 5 - Production/Stable"
+ - 'Intended Audience :: Developers'
+ - "Intended Audience :: Education"
+ - "Intended Audience :: End Users/Desktop"
+ - "Intended Audience :: Science/Research"
+ - "Topic :: Education"
+ - "Topic :: Scientific/Engineering :: Bio-Informatics"
+ - "Topic :: Scientific/Engineering :: Chemistry"
+ - "Topic :: Software Development :: Libraries :: Python Modules"
+
+github_ci_requirements:
+ Linux:
+  post:
+   - sudo add-apt-repository universe
+   - sudo apt update
+   - sudo apt install libhdf5-dev netcdf-bin libnetcdf-dev
+
+keywords:
+ - chemistry
+ - mass-spectrometry
+ - chromatography
+ - visualization

@@ -1,0 +1,31 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools>=40.6.0", "wheel>=0.34.2",]
+
+[project]
+name = "PyMassSpec-Plot"
+version = "0.0.0"
+description = "Plotting extension for PyMassSpec."
+readme = "README.rst"
+keywords = [ "chemistry", "chromatography", "mass-spectrometry", "visualization",]
+dynamic = [ "requires-python", "classifiers", "dependencies",]
+
+[[project.authors]]
+name = "Dominic Davis-Foster"
+email = "dominic@davis-foster.co.uk"
+
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/PyMassSpec/PyMassSpec-Plot"
+"Issue Tracker" = "https://github.com/PyMassSpec/PyMassSpec-Plot/issues"
+"Source Code" = "https://github.com/PyMassSpec/PyMassSpec-Plot"
+Documentation = "https://pymassspec-plot.readthedocs.io/en/latest"
+
+[tool.mkrecipe]
+conda-channels = [ "bioconda", "conda-forge", "domdfcoding",]
+extras = "all"
+license-key = "GPL-2.0-only"
+package = "pymassspec_plot"
