@@ -2,7 +2,9 @@ coincidence>=0.2.0
 coverage>=5.1
 coverage-pyver-pragma>=0.2.1
 importlib-metadata>=3.6.0
+matplotlib==3.2.2; platform_machine == "aarch64" and python_version == "3.6"
 pytest>=6.0.0
 pytest-cov>=2.8.1
+pytest-mpl>=0.11
 pytest-randomly>=3.7.0
 pytest-timeout>=1.4.2
