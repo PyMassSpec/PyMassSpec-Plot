@@ -1,0 +1,89 @@
+# This file is managed by 'repo_helper'. Don't edit it directly.
+---
+name: notebooks rerender
+
+on:
+  push:
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  Run:
+    name: "notebooks"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: Checkout 🛎️
+        uses: "actions/checkout@v2"
+
+      - name: Setup Python 🐍
+        uses: "actions/setup-python@v2"
+        with:
+          python-version: "3.6"
+
+      - name: Install dependencies 🔧
+        run: |
+          python -VV
+          python -m site
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install nbformat nbconvert jupyter-client ipykernel domdf_python_tools
+          python -m pip install -r requirements.txt
+          python -m pip install .
+
+      - name: "Change to Notebooks branch"
+        run: git checkout -b Notebooks
+
+      - name: "Setup work dir"
+        run: |
+          git config --global user.email "dominic@davis-foster.co.uk"
+          git config --global user.name "Dominic Davis-Foster"
+        working-directory: demo/jupyter
+
+      - name: Display structure of work dir
+        run: ls -R
+        working-directory: demo/jupyter
+
+      - name: "Render notebooks"
+        run: |
+          for file in *.ipynb; do
+            jupyter nbconvert --clear-output --inplace "$file"
+            jupyter nbconvert --to notebook --inplace --execute "$file"
+          done
+        working-directory: demo/jupyter
+
+      - name: "Regenerate reStructuredText files"
+        run: python3 notebook2rst.py
+
+# TODO: regenerate scripts using notebook2script
+
+      - name: "Remove execution times"
+        working-directory: demo/jupyter
+        run: |
+          cat > remove_execution_times.py <<EOF
+          #!/usr/bin/env/python3
+          from domdf_python_tools.paths import PathPlus
+
+          for filename in PathPlus.cwd().glob("*.ipynb"):
+          	notebook = filename.load_json()
+          	for cell in notebook["cells"]:
+          		if "execution" in cell["metadata"]:
+          			cell["metadata"]["execution"] = {}
+          		if "pycharm" in cell["metadata"]:
+          			del cell["metadata"]["pycharm"]
+          	filename.dump_json(notebook, indent=1)
+          EOF
+
+          python3 remove_execution_times.py
+
+      - name: "Stage, commit and push"
+        run: |
+          for file in demo/jupyter/*.ipynb; do
+            git stage "$file"
+          done
+
+          for file in doc-source/demo_rst/*.rst; do
+            git stage "$file"
+          done
+
+          git commit -m "Re-rendered Jupyter Notebooks"
+          git push --set-upstream origin Notebooks --force
