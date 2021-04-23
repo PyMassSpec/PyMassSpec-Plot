@@ -1,6 +1,6 @@
 [build-system]
-build-backend = "setuptools.build_meta"
-requires = [ "setuptools>=40.6.0", "wheel>=0.34.2",]
+build-backend = "whey"
+requires = [ "whey",]
 
 [project]
 name = "PyMassSpec-Plot"
@@ -29,3 +29,24 @@ conda-channels = [ "bioconda", "conda-forge", "domdfcoding",]
 extras = "all"
 license-key = "GPL-2.0-only"
 package = "pymassspec_plot"
+
+[tool.whey]
+base-classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Science/Research",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+python-versions = [ "3.6", "3.7", "3.8", "3.9",]
+python-implementations = [ "CPython",]
+platforms = [ "Windows", "macOS", "Linux",]
+license-key = "GPL-2.0-only"
+package = "pymassspec_plot"
+
+[tool.dep_checker.name_mapping]
+pymassspec = "pyms"

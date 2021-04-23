@@ -12,6 +12,11 @@ version: '0.0.0'
 license: 'GPLv2'
 short_desc: 'Plotting extension for PyMassSpec.'
 
+min_coverage: 88
+use_whey: true
+sphinx_html_theme: furo
+standalone_contrib_guide: true
+
 conda_channels:
  - bioconda
  - conda-forge
@@ -47,3 +52,15 @@ keywords:
  - mass-spectrometry
  - chromatography
  - visualization
+
+tox_unmanaged:
+ - pytest
+
+extra_sphinx_extensions:
+ - html_section
+
+sphinx_conf_epilogue:
+ - nitpicky = True
+ - "exclude_patterns = ['../pyms-demo/old/', 'demo_rst/*.rst', 'todo/', 'chapter09.rst', 'chapter10.rst']"
+ - nbsphinx_input_prompt = 'In [%s]:'
+ - sys.path.extend((os.path.abspath('.'), os.path.abspath("..")))
