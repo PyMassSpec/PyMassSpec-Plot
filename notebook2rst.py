@@ -168,7 +168,7 @@ demo_rst_dir = PathPlus("doc-source/demo_rst").resolve()
 if not demo_rst_dir.is_dir():
 	demo_rst_dir.mkdir()
 
-images_dir = PathPlus("doc-source/graphics").resolve()
+images_dir = PathPlus("doc-source/examples/graphics").resolve()
 if not images_dir.is_dir():
 	images_dir.mkdir()
 
