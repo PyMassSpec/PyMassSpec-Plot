@@ -154,6 +154,7 @@ Contents
 
 	examples/index
 	api
+	migration
 	contributing
 	Source
 
