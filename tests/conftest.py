@@ -1,7 +1,9 @@
 # stdlib
 from copy import deepcopy
+from typing import Callable, Type, TypeVar
 
 # 3rd party
+import numpy
 import pytest
 from domdf_python_tools.paths import PathPlus
 from pyms.BillerBiemann import BillerBiemann  # type: ignore
@@ -9,6 +11,7 @@ from pyms.GCMS.IO.JCAMP import JCAMP_reader  # type: ignore
 from pyms.IntensityMatrix import build_intensity_matrix_i  # type: ignore
 from pyms.Noise.SavitzkyGolay import savitzky_golay  # type: ignore
 from pyms.TopHat import tophat  # type: ignore
+from pytest_regressions.data_regression import RegressionYamlDumper
 
 pytest_plugins = ("coincidence", )
 
@@ -64,3 +67,22 @@ def _peak_list(im_i):
 @pytest.fixture()
 def peak_list(_peak_list):
 	return deepcopy(_peak_list)
+
+
+_C = TypeVar("_C", bound=Callable)
+
+
+def _representer_for(*data_type: Type):
+
+	def deco(representer_fn: _C) -> _C:
+		for dtype in data_type:
+			RegressionYamlDumper.add_custom_yaml_representer(dtype, representer_fn)
+
+		return representer_fn
+
+	return deco
+
+
+@_representer_for(numpy.float64)
+def _represent_float_like(dumper: RegressionYamlDumper, data):
+	return dumper.represent_float(float(data))
