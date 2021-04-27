@@ -11,7 +11,7 @@ from pyms.GCMS.IO.JCAMP import JCAMP_reader  # type: ignore
 from pyms.IntensityMatrix import build_intensity_matrix_i  # type: ignore
 from pyms.Noise.SavitzkyGolay import savitzky_golay  # type: ignore
 from pyms.TopHat import tophat  # type: ignore
-from pytest_regressions.data_regression import RegressionYamlDumper
+from pytest_regressions.data_regression import RegressionYamlDumper  # type: ignore
 
 pytest_plugins = ("coincidence", )
 
