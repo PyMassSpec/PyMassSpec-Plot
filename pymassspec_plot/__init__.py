@@ -288,6 +288,22 @@ class ClickEventHandler:
 	:param n_intensities:
 	"""  # noqa: D400
 
+	#: The figure to associate the event handler with.
+	fig: Figure
+	#: The axes to associate the event handler with.
+	ax: Axes
+
+	#: The figure to plot mass spectra on after right clicking the plot.
+	ms_fig: Figure
+	#: The axes to plot mass spectra on after right clicking the plot.
+	ms_ax: Axes
+
+	#: The number of top intensities to show in the terminal when left clicking the plot.
+	n_intensities: int
+
+	#: The callback ID for the button press event.
+	cid: Optional[int]
+
 	def __init__(
 			self,
 			peak_list: Sequence[Peak.Peak],
@@ -370,7 +386,7 @@ class ClickEventHandler:
 
 		:param intensity_list: List of ion intensities.
 
-		:return: Indices of largest ``n_intensities`` ion intensities.
+		:return: Indices of largest :attr:`~.n_intensities` ion intensities.
 		"""
 
 		largest = [0] * self.n_intensities

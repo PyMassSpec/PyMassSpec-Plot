@@ -58,6 +58,7 @@ tox_unmanaged:
 
 extra_sphinx_extensions:
  - html_section
+ - sphinx_toolbox.tweaks.footnote_symbols
 
 sphinx_conf_epilogue:
  - nitpicky = True
