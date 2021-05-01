@@ -2,6 +2,8 @@
 Migration from :mod:`pyms.Display`
 =====================================
 
+:mod:`pymassspec_plot` replaces :mod:`pyms.Display`. The latter will evantually deprecated and removed.
+
 .. csv-table:: Mapping of names from :mod:`pyms.Display` to :mod:`pymassspec_plot`.
 	:header: Old,New
 
