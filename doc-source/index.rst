@@ -149,7 +149,6 @@ Contents
 
 .. toctree::
 	:maxdepth: 3
-	:caption: Documentation
 	:glob:
 
 	examples/index

@@ -2,9 +2,9 @@
 Migration from :mod:`pyms.Display`
 =====================================
 
-:mod:`pymassspec_plot` replaces :mod:`pyms.Display`. The latter will evantually deprecated and removed.
+:mod:`pymassspec_plot` replaces :mod:`pyms.Display`. The latter will eventually deprecated and removed.
 
-.. csv-table:: Mapping of names from :mod:`pyms.Display` to :mod:`pymassspec_plot`.
+.. csv-table:: Replacements for functions in :mod:`pyms.Display`
 	:header: Old,New
 
 	:func:`pyms.Display.plot_ic`,:func:`pymassspec_plot.plot_ic`
@@ -16,9 +16,9 @@ Migration from :mod:`pyms.Display`
 
 
 :mod:`pyms.Display` also provided a ``Display`` class.
-Its methods were mostly thin wrappers around the functions this library provides.
+Its methods were mostly thin wrappers around the functions in this library.
 
-.. csv-table:: Mapping of methods on :class:`pyms.Display.Display` to functions in :mod:`pymassspec_plot`.
+.. csv-table:: Replacements for methods on :class:`pyms.Display.Display`
 	:header: Old,New
 
 	:meth:`pyms.Display.Display.plot_ic`,:func:`pymassspec_plot.plot_ic`
