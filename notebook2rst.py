@@ -154,6 +154,11 @@ string_replacements = {
 				".. note:: This may not",
 		"Example: ":
 				'',
+		"    "
+		"%matplotlib inline\n":
+				'',
+		"    # Change to `notebook` for an interactive view\n    \n":
+				'',
 		}
 
 notebooks = [

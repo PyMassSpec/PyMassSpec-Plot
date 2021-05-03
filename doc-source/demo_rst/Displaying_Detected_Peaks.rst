@@ -104,9 +104,6 @@ Create a subplot, and plot the TIC.
 .. code-cell:: python
     :execution-count: 6
 
-    %matplotlib inline
-    # Change to ``notebook`` for an interactive view
-
     fig, ax = plt.subplots(1, 1, figsize=(8, 5))
 
     # Plot the ICs

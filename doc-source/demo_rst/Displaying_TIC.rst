@@ -41,9 +41,6 @@ plot the TIC:
     import matplotlib.pyplot as plt
     from pymassspec_plot import plot_ic
 
-    %matplotlib inline
-    # Change to `notebook` for an interactive view
-
     fig, ax = plt.subplots(1, 1, figsize=(8, 5))
 
     # Plot the TIC
