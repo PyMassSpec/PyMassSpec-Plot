@@ -11,3 +11,9 @@ like the one shown in :numref:`Displaying_TIC_output_script`.
 	Graphics window displayed by the ``Displaying_TIC.py`` script
 
 .. note:: This example is in ``demo/jupyter/Displaying_TIC.ipynb`` and ``demo/scripts/Displaying_TIC.py``.
+
+.. only:: latex
+
+	.. raw:: latex
+
+		\clearpage
