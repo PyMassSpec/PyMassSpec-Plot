@@ -64,6 +64,16 @@ autodoc_default_options = {
 		"exclude-members": ','.join(config["autodoc_exclude_members"]),
 		}
 
+latex_elements = {}
+
+
+def setup(app):
+	# 3rd party
+	from sphinx_toolbox.latex import better_header_layout
+
+	app.connect("config-inited", lambda app, config: better_header_layout(config))
+
+
 nitpicky = True
 numfig = True
 exclude_patterns = ["../pyms-demo/old/", "demo_rst/*.rst", "todo/", "chapter09.rst", "chapter10.rst"]

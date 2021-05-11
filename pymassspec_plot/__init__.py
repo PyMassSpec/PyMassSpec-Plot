@@ -182,6 +182,8 @@ def plot_head2tail(
 	See :class:`matplotlib.lines.Line2D` for the list of possible keyword arguments.
 
 	:return: A tuple of containers with all the bars, and optionally errorbars, for the top and bottom spectra.
+
+	.. clearpage::
 	"""
 
 	if not isinstance(top_mass_spec, MassSpectrum):

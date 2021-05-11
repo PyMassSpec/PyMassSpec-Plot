@@ -1,5 +1,7 @@
 .. include:: ../demo_rst/Displaying_Mass_Spec.rst
 
+.. clearpage::
+
 When not running in Jupyter Notebook, the spectrum may appear in a separate window
 like the one shown in :numref:`Displaying_Mass_Spec`.
 
@@ -11,3 +13,5 @@ like the one shown in :numref:`Displaying_Mass_Spec`.
 	Graphics window displayed by the ``Displaying_Mass_Spec.py`` script
 
 .. note:: This example is in ``demo/jupyter/Displaying_Mass_Spec.ipynb`` and ``demo/scripts/Displaying_Mass_Spec.py``.
+
+.. clearpage::

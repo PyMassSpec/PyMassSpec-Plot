@@ -1,5 +1,7 @@
 .. include:: ../demo_rst/Displaying_Multiple_IC.rst
 
+.. clearpage::
+
 When not running in Jupyter Notebook, the plot may appear in a separate window
 like the one shown in :numref:`Displaying_Multiple_IC`.
 
@@ -11,3 +13,5 @@ like the one shown in :numref:`Displaying_Multiple_IC`.
 	Graphics window displayed by the ``Displaying_Multiple_IC.py`` script
 
 .. note:: This example is in ``demo/jupyter/Displaying_Multiple_IC.ipynb`` and ``demo/scripts/Displaying_Multiple_IC.py``.
+
+.. clearpage::

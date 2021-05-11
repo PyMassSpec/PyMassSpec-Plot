@@ -13,8 +13,13 @@ To return to the original view, click on the |home| button.
 The |cross| button allows panning across the zoomed plot.
 
 .. |magnifier| image:: graphics/magnifier_button.png
+	:scale: 50
+
 .. |home| image:: graphics/home_button.png
+	:scale: 50
+
 .. |cross| image:: graphics/cross_button.png
+	:scale: 50
 
 .. note::
 

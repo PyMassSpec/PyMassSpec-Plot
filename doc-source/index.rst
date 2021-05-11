@@ -157,12 +157,18 @@ Contents
 	contributing
 	Source
 
+.. sidebar-links::
+	:caption: Links
+	:github:
+	:pypi: PyMassSpec-Plot
+
+
 .. start links
 
 .. only:: html
 
 	View the :ref:`Function Index <genindex>` or browse the `Source Code <_modules/index.html>`__.
 
-	`Browse the GitHub Repository <https://github.com/PyMassSpec/PyMassSpec-Plot>`__
+	:github:repo:`Browse the GitHub Repository <PyMassSpec/PyMassSpec-Plot>`
 
 .. end links

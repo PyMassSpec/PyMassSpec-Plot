@@ -111,8 +111,10 @@ collected.
 
 
 Clicking on a peak causes a list of the 5 highest intensity ions at that
-peak to be written to the terminal in order. The output should look
-similar to this:
+peak to be written to the terminal in order.
+
+.. clearpage::
+The output should look similar to this:
 
 ::
 

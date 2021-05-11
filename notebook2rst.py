@@ -159,6 +159,8 @@ string_replacements = {
 				'',
 		"    # Change to `notebook` for an interactive view\n    \n":
 				'',
+		"The output should look similar to this:":
+				".. clearpage::\nThe output should look similar to this:",
 		}
 
 notebooks = [

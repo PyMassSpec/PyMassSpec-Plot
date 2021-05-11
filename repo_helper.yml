@@ -17,6 +17,7 @@ use_whey: true
 sphinx_html_theme: furo
 standalone_contrib_guide: true
 python_deploy_version: 3.7
+preserve_custom_theme: true
 
 conda_channels:
  - bioconda
