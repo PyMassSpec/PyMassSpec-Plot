@@ -29,7 +29,7 @@ Read the raw data files and extract the TIC.
 
 .. parsed-literal::
 
-     -> Reading JCAMP file '/home/vagrant/PyMassSpec/pyms-data/gc01_0812_066.jdx'
+     -> Reading JCAMP file '/home/runner/work/PyMassSpec-Plot/PyMassSpec-Plot/datafiles/gc01_0812_066.jdx'
 
 
 Import matplotlib and the :func:`~pymassspec_plot.plot_ic` function, create a subplot, and
