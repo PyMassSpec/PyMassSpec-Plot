@@ -62,6 +62,7 @@ jobs:
         run: |
           cat > remove_execution_times.py <<EOF
           #!/usr/bin/env/python3
+          import json
           from domdf_python_tools.paths import PathPlus
 
           for filename in PathPlus.cwd().glob("*.ipynb"):
@@ -71,7 +72,8 @@ jobs:
           			cell["metadata"]["execution"] = {}
           		if "pycharm" in cell["metadata"]:
           			del cell["metadata"]["pycharm"]
-          	filename.dump_json(notebook, indent=1)
+          	filename.write_clean(json.dumps(notebook, indent=1).replace("/home/runner/work/PyMassSpec-Plot/", ''))
+
           EOF
 
           python3 remove_execution_times.py
