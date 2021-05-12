@@ -154,7 +154,6 @@ Contents
 	examples/index
 	api
 	migration
-	contributing
 	Source
 
 .. sidebar-links::
@@ -162,6 +161,7 @@ Contents
 	:github:
 	:pypi: PyMassSpec-Plot
 
+	Contributing Guide<https://contributing-to-pyms.readthedocs.io/en/latest/>
 
 .. start links
 

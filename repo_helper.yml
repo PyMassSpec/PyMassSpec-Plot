@@ -68,3 +68,6 @@ sphinx_conf_epilogue:
  - "exclude_patterns = ['../pyms-demo/old/', 'demo_rst/*.rst', 'todo/', 'chapter09.rst', 'chapter10.rst']"
  - nbsphinx_input_prompt = 'In [%s]:'
  - sys.path.append(os.path.abspath(".."))
+
+exclude_files:
+ - contributing
