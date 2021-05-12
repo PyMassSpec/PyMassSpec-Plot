@@ -43,7 +43,7 @@ To use the class, first import and process the data as before:
 
 .. parsed-literal::
 
-     -> Reading JCAMP file '/home/vagrant/PyMassSpec/pyms-data/gc01_0812_066.jdx'
+     -> Reading JCAMP file '/home/runner/work/PyMassSpec-Plot/PyMassSpec-Plot/datafiles/gc01_0812_066.jdx'
     Trimming data to between 520 and 4517 scans
 
 

@@ -27,7 +27,7 @@ To start, load a datafile and create an :class:`~pyms.IntensityMatrix.IntensityM
 
 .. parsed-literal::
 
-     -> Reading JCAMP file '/home/vagrant/PyMassSpec/pyms-data/gc01_0812_066.jdx'
+     -> Reading JCAMP file '/home/runner/work/PyMassSpec-Plot/PyMassSpec-Plot/datafiles/gc01_0812_066.jdx'
 
 
 Extract the desired :class:`~pyms.Spectrum.MassSpectrum` from the :class:`~pyms.IntensityMatrix.IntensityMatrix`.
