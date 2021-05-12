@@ -8,3 +8,7 @@ div.highlight {
 .field-list dt, dl.simple dt {
 	margin-top: 0.5rem;
 }
+
+.sidebar-brand-text {
+    font-size: 1.3rem;
+}

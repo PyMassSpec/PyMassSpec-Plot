@@ -78,3 +78,4 @@ nitpicky = True
 numfig = True
 exclude_patterns = ["demo_rst/*.rst"]
 sys.path.append(os.path.abspath(".."))
+html_logo = "PyMassSpec_262.png"
