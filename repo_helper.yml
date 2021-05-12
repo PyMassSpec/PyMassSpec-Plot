@@ -41,6 +41,8 @@ classifiers:
  - "Topic :: Scientific/Engineering :: Bio-Informatics"
  - "Topic :: Scientific/Engineering :: Chemistry"
  - "Topic :: Software Development :: Libraries :: Python Modules"
+ - "Framework :: Matplotlib"
+ - "Topic :: Scientific/Engineering :: Visualization"
 
 github_ci_requirements:
  Linux:
