@@ -76,6 +76,5 @@ def setup(app):
 
 nitpicky = True
 numfig = True
-exclude_patterns = ["../pyms-demo/old/", "demo_rst/*.rst", "todo/", "chapter09.rst", "chapter10.rst"]
-nbsphinx_input_prompt = "In [%s]:"
+exclude_patterns = ["demo_rst/*.rst"]
 sys.path.append(os.path.abspath(".."))
