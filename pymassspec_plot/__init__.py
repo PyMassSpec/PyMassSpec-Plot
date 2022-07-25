@@ -26,20 +26,20 @@ Plotting extension for PyMassSpec.
 ################################################################################
 
 # stdlib
-from typing import Dict, List, Mapping, Optional, Sequence, Tuple
+from typing import List, Mapping, Optional, Sequence, Tuple
 
 # 3rd party
-import matplotlib  # type: ignore
-import matplotlib.pyplot as plt  # type: ignore
-from matplotlib.axes import Axes  # type: ignore
-from matplotlib.backend_bases import MouseEvent  # type: ignore
-from matplotlib.container import BarContainer  # type: ignore
-from matplotlib.figure import Figure  # type: ignore
-from matplotlib.lines import Line2D  # type: ignore
-from pyms import Peak  # type: ignore
-from pyms.IonChromatogram import IonChromatogram  # type: ignore
-from pyms.Peak.List.Function import is_peak_list  # type: ignore
-from pyms.Spectrum import MassSpectrum, normalize_mass_spec  # type: ignore
+import matplotlib  # type: ignore[import]
+import matplotlib.pyplot as plt  # type: ignore[import]
+from matplotlib.axes import Axes  # type: ignore[import]
+from matplotlib.backend_bases import MouseEvent  # type: ignore[import]
+from matplotlib.container import BarContainer  # type: ignore[import]
+from matplotlib.figure import Figure  # type: ignore[import]
+from matplotlib.lines import Line2D  # type: ignore[import]
+from pyms import Peak  # type: ignore[import]
+from pyms.IonChromatogram import IonChromatogram  # type: ignore[import]
+from pyms.Peak.List.Function import is_peak_list  # type: ignore[import]
+from pyms.Spectrum import MassSpectrum, normalize_mass_spec  # type: ignore[import]
 
 # this package
 from pymassspec_plot.utils import invert_mass_spec
@@ -340,7 +340,7 @@ class ClickEventHandler:
 		else:
 			self.cid = None
 
-	def onclick(self, event: MouseEvent):
+	def onclick(self, event: MouseEvent) -> None:
 		"""
 		Finds the n highest intensity m/z channels for the selected peak.
 		The peak is selected by clicking on it.
