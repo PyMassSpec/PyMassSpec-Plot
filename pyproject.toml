@@ -4,7 +4,7 @@ build-backend = "whey"
 
 [project]
 name = "PyMassSpec-Plot"
-version = "0.0.0"
+version = "0.1.0b1"
 description = "Plotting extension for PyMassSpec."
 readme = "README.rst"
 keywords = [ "chemistry", "chromatography", "mass-spectrometry", "visualization",]
