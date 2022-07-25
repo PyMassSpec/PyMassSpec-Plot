@@ -1,6 +1,6 @@
 [build-system]
-build-backend = "whey"
 requires = [ "whey",]
+build-backend = "whey"
 
 [project]
 name = "PyMassSpec-Plot"
@@ -55,7 +55,7 @@ github_username = "PyMassSpec"
 github_repository = "PyMassSpec-Plot"
 author = "Dominic Davis-Foster"
 project = "PyMassSpec-Plot"
-copyright = "2020-2022 Dominic Davis-Foster"
+copyright = "2020-2021 Dominic Davis-Foster"
 language = "en"
 package_root = "pymassspec_plot"
 extensions = [
@@ -130,5 +130,37 @@ autodoc_exclude_members = [
     "__hash__",
 ]
 
+[tool.mypy]
+python_version = "3.7"
+namespace_packages = true
+check_untyped_defs = true
+warn_unused_ignores = true
+no_implicit_optional = true
+show_error_codes = true
+
+[tool.snippet-fmt]
+directives = [ "code-block",]
+
 [tool.dep_checker.name_mapping]
 pymassspec = "pyms"
+
+[tool.dependency-dash."requirements.txt"]
+order = 10
+
+[tool.dependency-dash."tests/requirements.txt"]
+order = 20
+include = false
+
+[tool.dependency-dash."doc-source/requirements.txt"]
+order = 30
+include = false
+
+[tool.snippet-fmt.languages.python]
+reformat = true
+
+[tool.snippet-fmt.languages.TOML]
+reformat = true
+
+[tool.snippet-fmt.languages.ini]
+
+[tool.snippet-fmt.languages.json]
