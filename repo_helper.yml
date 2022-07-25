@@ -2,7 +2,7 @@
 ---
 modname: 'PyMassSpec-Plot'
 import_name: 'pymassspec_plot'
-copyright_years: '2020-2021'
+copyright_years: '2020-2022'
 author: 'Dominic Davis-Foster'
 email: 'dominic@davis-foster.co.uk'
 username: 'PyMassSpec'
