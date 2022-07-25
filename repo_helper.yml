@@ -15,7 +15,6 @@ short_desc: 'Plotting extension for PyMassSpec.'
 min_coverage: 88
 use_whey: true
 sphinx_html_theme: furo
-standalone_contrib_guide: true
 python_deploy_version: 3.7
 preserve_custom_theme: true
 
@@ -61,7 +60,6 @@ tox_unmanaged:
  - pytest
 
 extra_sphinx_extensions:
- - html_section
  - sphinx_toolbox.tweaks.footnote_symbols
 
 sphinx_conf_epilogue:
