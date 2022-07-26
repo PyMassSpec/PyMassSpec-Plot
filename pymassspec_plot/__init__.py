@@ -47,7 +47,7 @@ from pymassspec_plot.utils import invert_mass_spec
 __author__: str = "Dominic Davis-Foster"
 __copyright__: str = "2020-2021 Dominic Davis-Foster"
 __license__: str = "GNU General Public License v2 (GPLv2)"
-__version__: str = "0.1.0"
+__version__: str = "0.1.0.post1"
 __email__: str = "dominic@davis-foster.co.uk"
 
 __all__ = ["plot_ic", "plot_mass_spec", "plot_peaks", "plot_head2tail", "ClickEventHandler"]
