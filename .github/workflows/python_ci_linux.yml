@@ -70,7 +70,7 @@ jobs:
 
       - name: "Run Tests for Python ${{ matrix.config.python-version }}"
         if: steps.setup-python.outcome == 'success'
-        run: python -m tox -e "${{ matrix.config.testenvs }}" -s false
+        run: python -m tox  -vv -e "${{ matrix.config.testenvs }}" -s false
 
       - name: "Upload Coverage 🚀"
         uses: actions/upload-artifact@v2
