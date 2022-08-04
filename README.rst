@@ -101,7 +101,7 @@ PyMassSpec-Plot
 .. |language| image:: https://img.shields.io/github/languages/top/PyMassSpec/PyMassSpec-Plot
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/PyMassSpec/PyMassSpec-Plot/v0.1.0.post1
+.. |commits-since| image:: https://img.shields.io/github/commits-since/PyMassSpec/PyMassSpec-Plot/v0.2.0
 	:target: https://github.com/PyMassSpec/PyMassSpec-Plot/pulse
 	:alt: GitHub commits since tagged version
 
