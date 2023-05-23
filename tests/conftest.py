@@ -15,7 +15,7 @@ from pyms.Noise.SavitzkyGolay import savitzky_golay  # type: ignore[import]
 from pyms.Peak import Peak  # type: ignore[import]
 from pyms.Spectrum import MassSpectrum  # type: ignore[import]
 from pyms.TopHat import tophat  # type: ignore[import]
-from pytest_regressions.data_regression import RegressionYamlDumper  # type: ignore[import]
+from pytest_regressions.data_regression import RegressionYamlDumper
 
 pytest_plugins = ("coincidence", )
 
