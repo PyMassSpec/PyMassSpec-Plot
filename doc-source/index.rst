@@ -60,8 +60,8 @@ PyMassSpec-Plot
 		:workflow: mypy
 		:alt: mypy status
 
-	.. |requires| image:: https://dependency-dash.herokuapp.com/github/PyMassSpec/PyMassSpec-Plot/badge.svg
-		:target: https://dependency-dash.herokuapp.com/github/PyMassSpec/PyMassSpec-Plot/
+	.. |requires| image:: https://dependency-dash.repo-helper.uk/github/PyMassSpec/PyMassSpec-Plot/badge.svg
+		:target: https://dependency-dash.repo-helper.uk/github/PyMassSpec/PyMassSpec-Plot/
 		:alt: Requirements Status
 
 	.. |coveralls| coveralls-shield::
@@ -114,7 +114,7 @@ PyMassSpec-Plot
 		:last-commit:
 		:alt: GitHub last commit
 
-	.. |maintained| maintained-shield:: 2022
+	.. |maintained| maintained-shield:: 2023
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::
