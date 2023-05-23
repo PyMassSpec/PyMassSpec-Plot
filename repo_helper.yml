@@ -15,7 +15,7 @@ short_desc: 'Plotting extension for PyMassSpec.'
 min_coverage: 88
 use_whey: true
 sphinx_html_theme: furo
-python_deploy_version: 3.7
+python_deploy_version: 3.8
 preserve_custom_theme: true
 
 conda_channels:
@@ -28,6 +28,7 @@ python_versions:
  - 3.8
  - 3.9
  - '3.10'
+ - '3.11'
 
 classifiers:
  - "Development Status :: 5 - Production/Stable"
