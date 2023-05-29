@@ -47,7 +47,7 @@ def ms(im_i: IntensityMatrix) -> MassSpectrum:
 	return deepcopy(im_i.get_ms_at_index(0))
 
 
-@pytest.fixture(scope="session")  # noqa: PT005
+@pytest.fixture(scope="session")
 def _peak_list(im_i: IntensityMatrix) -> List[Peak]:
 	im_i = deepcopy(im_i)
 
