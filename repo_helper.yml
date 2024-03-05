@@ -16,6 +16,7 @@ min_coverage: 88
 use_whey: true
 sphinx_html_theme: furo
 python_deploy_version: 3.8
+mypy_version: "1.8.0"
 preserve_custom_theme: true
 
 conda_channels:

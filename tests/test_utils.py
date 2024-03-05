@@ -1,6 +1,6 @@
 # 3rd party
 from coincidence import AdvancedDataRegressionFixture
-from pyms.Spectrum import MassSpectrum  # type: ignore
+from pyms.Spectrum import MassSpectrum
 
 # this package
 from pymassspec_plot import invert_mass_spec

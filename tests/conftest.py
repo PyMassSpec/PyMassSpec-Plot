@@ -6,15 +6,15 @@ from typing import Callable, List, Type, TypeVar
 import numpy
 import pytest
 from domdf_python_tools.paths import PathPlus
-from pyms.BillerBiemann import BillerBiemann  # type: ignore[import]
-from pyms.GCMS.Class import GCMS_data  # type: ignore[import]
-from pyms.GCMS.IO.JCAMP import JCAMP_reader  # type: ignore[import]
-from pyms.IntensityMatrix import IntensityMatrix, build_intensity_matrix_i  # type: ignore[import]
-from pyms.IonChromatogram import IonChromatogram  # type: ignore[import]
-from pyms.Noise.SavitzkyGolay import savitzky_golay  # type: ignore[import]
-from pyms.Peak import Peak  # type: ignore[import]
-from pyms.Spectrum import MassSpectrum  # type: ignore[import]
-from pyms.TopHat import tophat  # type: ignore[import]
+from pyms.BillerBiemann import BillerBiemann
+from pyms.GCMS.Class import GCMS_data
+from pyms.GCMS.IO.JCAMP import JCAMP_reader
+from pyms.IntensityMatrix import IntensityMatrix, build_intensity_matrix_i
+from pyms.IonChromatogram import IonChromatogram
+from pyms.Noise.SavitzkyGolay import savitzky_golay
+from pyms.Peak import Peak
+from pyms.Spectrum import MassSpectrum
+from pyms.TopHat import tophat
 from pytest_regressions.data_regression import RegressionYamlDumper
 
 pytest_plugins = ("coincidence", )

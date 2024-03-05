@@ -29,17 +29,17 @@ Plotting extension for PyMassSpec.
 from typing import List, Mapping, Optional, Sequence, Tuple
 
 # 3rd party
-import matplotlib  # type: ignore[import]
-import matplotlib.pyplot as plt  # type: ignore[import]
-from matplotlib.axes import Axes  # type: ignore[import]
-from matplotlib.backend_bases import MouseEvent  # type: ignore[import]
-from matplotlib.container import BarContainer  # type: ignore[import]
-from matplotlib.figure import Figure  # type: ignore[import]
-from matplotlib.lines import Line2D  # type: ignore[import]
-from pyms import Peak  # type: ignore[import]
-from pyms.IonChromatogram import IonChromatogram  # type: ignore[import]
-from pyms.Peak.List.Function import is_peak_list  # type: ignore[import]
-from pyms.Spectrum import MassSpectrum, normalize_mass_spec  # type: ignore[import]
+import matplotlib  # type: ignore[import-untyped]
+import matplotlib.pyplot as plt  # type: ignore[import-untyped]
+from matplotlib.axes import Axes  # type: ignore[import-untyped]
+from matplotlib.backend_bases import MouseEvent  # type: ignore[import-untyped]
+from matplotlib.container import BarContainer  # type: ignore[import-untyped]
+from matplotlib.figure import Figure  # type: ignore[import-untyped]
+from matplotlib.lines import Line2D  # type: ignore[import-untyped]
+from pyms import Peak
+from pyms.IonChromatogram import IonChromatogram
+from pyms.Peak.List.Function import is_peak_list
+from pyms.Spectrum import MassSpectrum, normalize_mass_spec
 
 # this package
 from pymassspec_plot.utils import invert_mass_spec

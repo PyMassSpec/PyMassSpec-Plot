@@ -26,7 +26,7 @@ Utility functions.
 ################################################################################
 
 # 3rd party
-from pyms.Spectrum import MassSpectrum  # type: ignore[import]
+from pyms.Spectrum import MassSpectrum
 
 __all__ = ["invert_mass_spec"]
 

@@ -6,15 +6,15 @@ from typing import List
 import pytest
 from coincidence.regressions import AdvancedFileRegressionFixture
 from domdf_python_tools.paths import PathPlus
-from matplotlib import pyplot as plt  # type: ignore[import]
-from matplotlib.backend_bases import MouseEvent  # type: ignore[import]
-from matplotlib.cbook import CallbackRegistry  # type: ignore[import]
-from matplotlib.figure import Figure  # type: ignore[import]
-from pyms.GCMS.Class import GCMS_data  # type: ignore[import]
-from pyms.IntensityMatrix import IntensityMatrix  # type: ignore[import]
-from pyms.IonChromatogram import IonChromatogram  # type: ignore[import]
-from pyms.Peak import Peak  # type: ignore[import]
-from pyms.Spectrum import MassSpectrum  # type: ignore[import]
+from matplotlib import pyplot as plt  # type: ignore[import-untyped]
+from matplotlib.backend_bases import MouseEvent  # type: ignore[import-untyped]
+from matplotlib.cbook import CallbackRegistry  # type: ignore[import-untyped]
+from matplotlib.figure import Figure  # type: ignore[import-untyped]
+from pyms.GCMS.Class import GCMS_data
+from pyms.IntensityMatrix import IntensityMatrix
+from pyms.IonChromatogram import IonChromatogram
+from pyms.Peak import Peak
+from pyms.Spectrum import MassSpectrum
 
 # this package
 from pymassspec_plot import ClickEventHandler, plot_head2tail, plot_ic, plot_mass_spec, plot_peaks
@@ -121,7 +121,7 @@ def test_plot_ic_errors(im_i: IntensityMatrix, data: GCMS_data, ms: MassSpectrum
 
 	for obj in [*test_sequences, test_string, *test_numbers, test_dict, im_i, data, ms]:
 		with pytest.raises(TypeError, match="'ic' must be an IonChromatogram"):
-			plot_ic(ax, obj)
+			plot_ic(ax, obj)  # type: ignore[arg-type]
 
 
 # Plotting tic with various Line2D options
@@ -185,7 +185,7 @@ def test_plot_tic_errors(im_i: IntensityMatrix, data: GCMS_data, ms: MassSpectru
 			ms,
 			]:
 		with pytest.raises(TypeError, match="'ic' must be an IonChromatogram"):
-			plot_ic(ax, obj)
+			plot_ic(ax, obj)  # type: ignore[arg-type]
 
 
 @check_images
@@ -250,7 +250,7 @@ def test_plot_mass_spec_errors(im_i: IntensityMatrix, data: GCMS_data, tic: IonC
 			tic,
 			]:
 		with pytest.raises(TypeError, match="'mass_spec' must be a MassSpectrum"):
-			plot_mass_spec(ax, obj)
+			plot_mass_spec(ax, obj)  # type: ignore[arg-type]
 
 
 @check_images
@@ -281,23 +281,33 @@ def test_plot_head2tail_errors(im_i: IntensityMatrix, data: GCMS_data):
 
 	for obj in [*test_sequences, test_string, *test_numbers, test_dict, im_i, data]:
 		with pytest.raises(TypeError, match="'top_mass_spec' must be a MassSpectrum"):
-			plot_head2tail(ax, obj, im_i.get_ms_at_index(150))
+			plot_head2tail(ax, obj, im_i.get_ms_at_index(150))  # type: ignore[arg-type]
 
 		with pytest.raises(TypeError, match="'bottom_mass_spec' must be a MassSpectrum"):
-			plot_head2tail(ax, im_i.get_ms_at_index(50), obj)
+			plot_head2tail(ax, im_i.get_ms_at_index(50), obj)  # type: ignore[arg-type]
 
 	for obj in [*test_sequences, test_string, *test_numbers, im_i.get_ms_at_index(250), im_i, data]:
 		with pytest.raises(
 				TypeError,
 				match="'top_spec_kwargs' must be a mapping of keyword arguments for the top mass spectrum."
 				):
-			plot_head2tail(ax, im_i.get_ms_at_index(50), im_i.get_ms_at_index(150), top_spec_kwargs=obj)
+			plot_head2tail(
+					ax,
+					im_i.get_ms_at_index(50),
+					im_i.get_ms_at_index(150),
+					top_spec_kwargs=obj,  # type: ignore[arg-type]
+					)
 
 		with pytest.raises(
 				TypeError,
 				match="'bottom_spec_kwargs' must be a mapping of keyword arguments for the bottom mass spectrum."
 				):
-			plot_head2tail(ax, im_i.get_ms_at_index(50), im_i.get_ms_at_index(150), bottom_spec_kwargs=obj)
+			plot_head2tail(
+					ax,
+					im_i.get_ms_at_index(50),
+					im_i.get_ms_at_index(150),
+					bottom_spec_kwargs=obj,  # type: ignore[arg-type]
+					)
 
 
 def test_plot_peaks(im_i: IntensityMatrix, data: GCMS_data, ms: MassSpectrum):
@@ -305,7 +315,7 @@ def test_plot_peaks(im_i: IntensityMatrix, data: GCMS_data, ms: MassSpectrum):
 
 	for obj in [*test_sequences, test_string, *test_numbers, test_dict, im_i, data, ms]:
 		with pytest.raises(TypeError, match="'peak_list' must be a list of Peak objects"):
-			plot_peaks(ax, obj)
+			plot_peaks(ax, obj)  # type: ignore[arg-type]
 
 
 @check_images
