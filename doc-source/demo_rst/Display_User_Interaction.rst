@@ -44,6 +44,10 @@ To use the class, first import and process the data as before:
 .. parsed-literal::
 
      -> Reading JCAMP file '/home/runner/work/PyMassSpec-Plot/PyMassSpec-Plot/datafiles/gc01_0812_066.jdx'
+
+
+.. parsed-literal::
+
     Trimming data to between 520 and 4517 scans
 
 
@@ -114,8 +118,9 @@ Clicking on a peak causes a list of the 5 highest intensity ions at that
 peak to be written to the terminal in order.
 
 .. clearpage::
+The output should look similar to this:
 
-The output should look similar to this::
+::
 
    RT: 1031.823
    Mass     Intensity
@@ -126,7 +131,9 @@ The output should look similar to this::
    147.0    196663.95238095228
 
 If there is no peak close to the point on the chart that was clicked,
-the following will be shown in the terminal::
+the following will be shown in the terminal:
+
+::
 
    No Peak at this point
 

@@ -37,6 +37,10 @@ Read the raw data files, extract the TIC and build the
 .. parsed-literal::
 
      -> Reading JCAMP file '/home/runner/work/PyMassSpec-Plot/PyMassSpec-Plot/datafiles/gc01_0812_066.jdx'
+
+
+.. parsed-literal::
+
     Trimming data to between 520 and 4517 scans
 
 
@@ -78,6 +82,10 @@ the PyMassSpec documentation.
 .. parsed-literal::
 
     Number of peaks found:  1467
+
+
+.. parsed-literal::
+
     Number of filtered peaks:  72
 
 
