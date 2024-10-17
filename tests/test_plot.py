@@ -1,5 +1,6 @@
 # stdlib
 import os
+import sys
 from typing import List
 
 # 3rd party
@@ -23,7 +24,14 @@ from tests.constants import test_dict, test_numbers, test_sequences, test_string
 baseline_dir = str(PathPlus(__file__).parent / "baseline")
 assert os.path.exists(baseline_dir)
 
-image_hashes = str(PathPlus(__file__).parent / "image_hashes.json")
+if sys.version_info[:2] == (3, 7):
+	image_hashes = str(PathPlus(__file__).parent / "image_hashes_37.json")
+elif sys.version_info[:2] == (3, 8):
+	image_hashes = str(PathPlus(__file__).parent / "image_hashes_38.json")
+elif sys.version_info >= (3, 13):
+	image_hashes = str(PathPlus(__file__).parent / "image_hashes_313.json")
+else:
+	image_hashes = str(PathPlus(__file__).parent / "image_hashes.json")
 
 check_images = pytest.mark.mpl_image_compare(
 		baseline_dir=baseline_dir,
