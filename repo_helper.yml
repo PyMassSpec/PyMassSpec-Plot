@@ -69,6 +69,7 @@ keywords:
 
 tox_unmanaged:
  - pytest
+ - testenv:py313
 
 extra_sphinx_extensions:
  - sphinx_toolbox.tweaks.footnote_symbols
