@@ -29,6 +29,7 @@ expected_order = [
 for filename in [
 		"tests/image_hashes_37.json",
 		"tests/image_hashes_38.json",
+		"tests/image_hashes_39.json",
 		"tests/image_hashes_313.json",
 		"tests/image_hashes.json",
 		]:

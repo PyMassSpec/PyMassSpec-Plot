@@ -28,6 +28,8 @@ if sys.version_info[:2] == (3, 7):
 	image_hashes = str(PathPlus(__file__).parent / "image_hashes_37.json")
 elif sys.version_info[:2] == (3, 8):
 	image_hashes = str(PathPlus(__file__).parent / "image_hashes_38.json")
+elif sys.version_info[:2] == (3, 9):
+	image_hashes = str(PathPlus(__file__).parent / "image_hashes_39.json")
 elif sys.version_info >= (3, 13):
 	image_hashes = str(PathPlus(__file__).parent / "image_hashes_313.json")
 else:
