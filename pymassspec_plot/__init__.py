@@ -29,13 +29,13 @@ Plotting extension for PyMassSpec.
 from typing import List, Mapping, Optional, Sequence, Tuple
 
 # 3rd party
-import matplotlib  # type: ignore[import-untyped]
-import matplotlib.pyplot as plt  # type: ignore[import-untyped]
-from matplotlib.axes import Axes  # type: ignore[import-untyped]
-from matplotlib.backend_bases import MouseEvent  # type: ignore[import-untyped]
-from matplotlib.container import BarContainer  # type: ignore[import-untyped]
-from matplotlib.figure import Figure  # type: ignore[import-untyped]
-from matplotlib.lines import Line2D  # type: ignore[import-untyped]
+import matplotlib
+import matplotlib.pyplot as plt
+from matplotlib.axes import Axes
+from matplotlib.backend_bases import MouseEvent
+from matplotlib.container import BarContainer
+from matplotlib.figure import Figure
+from matplotlib.lines import Line2D
 from pyms import Peak
 from pyms.IonChromatogram import IonChromatogram
 from pyms.Peak.List.Function import is_peak_list
@@ -296,9 +296,9 @@ class ClickEventHandler:
 	ax: Axes
 
 	#: The figure to plot mass spectra on after right clicking the plot.
-	ms_fig: Figure
+	ms_fig: Optional[Figure]
 	#: The axes to plot mass spectra on after right clicking the plot.
-	ms_ax: Axes
+	ms_ax: Optional[Axes]
 
 	#: The number of top intensities to show in the terminal when left clicking the plot.
 	n_intensities: int
@@ -327,8 +327,8 @@ class ClickEventHandler:
 
 		self.peak_list = peak_list
 
-		self.ms_fig: Optional[Figure] = None
-		self.ms_ax: Optional[Axes] = None
+		self.ms_fig = None
+		self.ms_ax = None
 
 		self._min = 1 - tolerance
 		self._max = 1 + tolerance
@@ -336,7 +336,7 @@ class ClickEventHandler:
 
 		# If no peak list plot, no mouse click event
 		if len(self.peak_list):
-			self.cid = self.fig.canvas.mpl_connect("button_press_event", self.onclick)
+			self.cid = self.fig.canvas.mpl_connect("button_press_event", self.onclick)  # type: ignore[arg-type]
 		else:
 			self.cid = None
 
@@ -351,6 +351,7 @@ class ClickEventHandler:
 
 		for peak in self.peak_list:
 			# if event.xdata > 0.9999*peak.rt and event.xdata < 1.0001*peak.rt:
+			assert event.xdata is not None
 			if self._min * peak.rt < event.xdata < self._max * peak.rt:
 				intensity_list = peak.mass_spectrum.mass_spec
 				mass_list = peak.mass_spectrum.mass_list

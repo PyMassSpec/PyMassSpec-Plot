@@ -7,10 +7,10 @@ from typing import List
 import pytest
 from coincidence.regressions import AdvancedFileRegressionFixture
 from domdf_python_tools.paths import PathPlus
-from matplotlib import pyplot as plt  # type: ignore[import-untyped]
-from matplotlib.backend_bases import MouseEvent  # type: ignore[import-untyped]
-from matplotlib.cbook import CallbackRegistry  # type: ignore[import-untyped]
-from matplotlib.figure import Figure  # type: ignore[import-untyped]
+from matplotlib import pyplot as plt
+from matplotlib.backend_bases import MouseEvent
+from matplotlib.cbook import CallbackRegistry
+from matplotlib.figure import Figure
 from pyms.GCMS.Class import GCMS_data
 from pyms.IntensityMatrix import IntensityMatrix
 from pyms.IonChromatogram import IonChromatogram
@@ -364,7 +364,7 @@ def test_click_event_handler(
 	callbacks: CallbackRegistry = fig.canvas.callbacks
 	assert "button_press_event" in callbacks.callbacks
 
-	event = MouseEvent("button_press_event", fig.canvas, peak_list[0].rt, 100, button=1)
+	event = MouseEvent("button_press_event", fig.canvas, peak_list[0].rt, 100, button=1)  # type: ignore[arg-type]
 	event.xdata = peak_list[0].rt  # FIXME
 
 	callbacks.process("button_press_event", event)
