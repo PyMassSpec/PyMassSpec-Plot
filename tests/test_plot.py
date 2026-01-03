@@ -299,7 +299,7 @@ def test_plot_head2tail_errors(im_i: IntensityMatrix, data: GCMS_data):
 	for obj in [*test_sequences, test_string, *test_numbers, im_i.get_ms_at_index(250), im_i, data]:
 		with pytest.raises(
 				TypeError,
-				match="'top_spec_kwargs' must be a mapping of keyword arguments for the top mass spectrum."
+				match="'top_spec_kwargs' must be a mapping of keyword arguments for the top mass spectrum.",
 				):
 			plot_head2tail(
 					ax,
@@ -310,7 +310,7 @@ def test_plot_head2tail_errors(im_i: IntensityMatrix, data: GCMS_data):
 
 		with pytest.raises(
 				TypeError,
-				match="'bottom_spec_kwargs' must be a mapping of keyword arguments for the bottom mass spectrum."
+				match="'bottom_spec_kwargs' must be a mapping of keyword arguments for the bottom mass spectrum.",
 				):
 			plot_head2tail(
 					ax,
