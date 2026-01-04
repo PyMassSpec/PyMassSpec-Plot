@@ -361,7 +361,7 @@ class ClickEventHandler:
 				print(f"RT: {peak.rt}")
 				print("Mass\t Intensity")
 				for i in range(self.n_intensities):
-					print(f"{mass_list[largest[i]]}\t {intensity_list[largest[i]]}")
+					print(f"{mass_list[largest[i]]}\t {intensity_list[largest[i]]:0.6f}")
 
 				# Check if right mouse button pressed, if so plot mass spectrum
 				# Also check that a peak was selected, not just whitespace
