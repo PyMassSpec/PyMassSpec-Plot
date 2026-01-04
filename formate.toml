@@ -27,19 +27,6 @@ lines_between_types = 0
 use_parentheses = true
 remove_redundant_aliases = true
 default_section = "THIRDPARTY"
-known_third_party = [
-    "coincidence",
-    "coverage",
-    "coverage_pyver_pragma",
-    "importlib_metadata",
-    "matplotlib",
-    "pymassspec",
-    "pytest",
-    "pytest_cov",
-    "pytest_mpl",
-    "pytest_randomly",
-    "pytest_timeout",
-]
 known_first_party = [ "pymassspec_plot",]
 
 [config]
