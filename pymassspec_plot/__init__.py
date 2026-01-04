@@ -154,7 +154,7 @@ def plot_mass_spec(ax: Axes, mass_spec: MassSpectrum, **kwargs) -> BarContainer:
 	return plot
 
 
-_spec_quargs_t = "'{0}_spec_kwargs' must be a mapping of keyword arguments for the {0} mass spectrum."
+_spec_qwargs_t = "'{0}_spec_kwargs' must be a mapping of keyword arguments for the {0} mass spectrum."
 
 
 def plot_head2tail(
@@ -195,12 +195,12 @@ def plot_head2tail(
 	if top_spec_kwargs is None:
 		top_spec_kwargs = dict(color="red", width=0.5)
 	elif not isinstance(top_spec_kwargs, Mapping):
-		raise TypeError(_spec_quargs_t.format("top"))
+		raise TypeError(_spec_qwargs_t.format("top"))
 
 	if bottom_spec_kwargs is None:
 		bottom_spec_kwargs = dict(color="blue", width=0.5)
 	elif not isinstance(bottom_spec_kwargs, Mapping):
-		raise TypeError(_spec_quargs_t.format("bottom"))
+		raise TypeError(_spec_qwargs_t.format("bottom"))
 
 	# Plot a line at y=0 with same width and colour as Spines
 	ax.axhline(
