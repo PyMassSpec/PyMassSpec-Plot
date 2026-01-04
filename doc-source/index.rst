@@ -114,7 +114,7 @@ PyMassSpec-Plot
 		:last-commit:
 		:alt: GitHub last commit
 
-	.. |maintained| maintained-shield:: 2025
+	.. |maintained| maintained-shield:: 2026
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::

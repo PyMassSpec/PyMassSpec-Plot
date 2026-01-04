@@ -48,6 +48,7 @@ else:
 			style="default",
 			)
 
+
 @check_images
 def test_plot_ic(im_i: IntensityMatrix):
 	fig, ax = plt.subplots()

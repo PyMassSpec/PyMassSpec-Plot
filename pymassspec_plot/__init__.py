@@ -59,7 +59,7 @@ Axes.__module__ = "matplotlib.axes"
 Figure.__module__ = "matplotlib.figure"
 
 
-def plot_ic(   # noqa: PRM002
+def plot_ic(  # noqa: PRM002
 		ax: matplotlib.axes.Axes,
 		ic: IonChromatogram,
 		minutes: bool = False,
@@ -103,7 +103,7 @@ def plot_ic(   # noqa: PRM002
 	return plot
 
 
-def plot_mass_spec(ax: Axes, mass_spec: MassSpectrum, **kwargs) -> BarContainer:   # noqa: PRM002
+def plot_mass_spec(ax: Axes, mass_spec: MassSpectrum, **kwargs) -> BarContainer:  # noqa: PRM002
 	"""
 	Plots a Mass Spectrum.
 
