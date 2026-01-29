@@ -3,7 +3,7 @@ requires = [ "whey",]
 build-backend = "whey"
 
 [project]
-name = "PyMassSpec-Plot"
+name = "pymassspec-plot"
 version = "0.2.1"
 description = "Plotting extension for PyMassSpec."
 readme = "README.rst"

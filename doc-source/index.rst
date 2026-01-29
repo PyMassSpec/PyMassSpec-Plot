@@ -71,22 +71,22 @@ PyMassSpec-Plot
 		:alt: CodeFactor Grade
 
 	.. |pypi-version| pypi-shield::
-		:project: PyMassSpec-Plot
+		:project: pymassspec-plot
 		:version:
 		:alt: PyPI - Package Version
 
 	.. |supported-versions| pypi-shield::
-		:project: PyMassSpec-Plot
+		:project: pymassspec-plot
 		:py-versions:
 		:alt: PyPI - Supported Python Versions
 
 	.. |supported-implementations| pypi-shield::
-		:project: PyMassSpec-Plot
+		:project: pymassspec-plot
 		:implementations:
 		:alt: PyPI - Supported Implementations
 
 	.. |wheel| pypi-shield::
-		:project: PyMassSpec-Plot
+		:project: pymassspec-plot
 		:wheel:
 		:alt: PyPI - Wheel
 
@@ -118,7 +118,7 @@ PyMassSpec-Plot
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::
-		:project: PyMassSpec-Plot
+		:project: pymassspec-plot
 		:downloads: month
 		:alt: PyPI - Downloads
 
@@ -131,6 +131,7 @@ Installation
 
 .. installation:: PyMassSpec-Plot
 	:pypi:
+	:pypi-name: pymassspec-plot
 	:github:
 	:anaconda:
 	:conda-channels: bioconda, conda-forge, domdfcoding
