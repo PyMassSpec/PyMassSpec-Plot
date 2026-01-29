@@ -70,20 +70,20 @@ PyMassSpec-Plot
 	:target: https://www.codefactor.io/repository/github/PyMassSpec/PyMassSpec-Plot
 	:alt: CodeFactor Grade
 
-.. |pypi-version| image:: https://img.shields.io/pypi/v/PyMassSpec-Plot
-	:target: https://pypi.org/project/PyMassSpec-Plot/
+.. |pypi-version| image:: https://img.shields.io/pypi/v/pymassspec-plot
+	:target: https://pypi.org/project/pymassspec-plot/
 	:alt: PyPI - Package Version
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/PyMassSpec-Plot?logo=python&logoColor=white
-	:target: https://pypi.org/project/PyMassSpec-Plot/
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/pymassspec-plot?logo=python&logoColor=white
+	:target: https://pypi.org/project/pymassspec-plot/
 	:alt: PyPI - Supported Python Versions
 
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/PyMassSpec-Plot
-	:target: https://pypi.org/project/PyMassSpec-Plot/
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/pymassspec-plot
+	:target: https://pypi.org/project/pymassspec-plot/
 	:alt: PyPI - Supported Implementations
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/PyMassSpec-Plot
-	:target: https://pypi.org/project/PyMassSpec-Plot/
+.. |wheel| image:: https://img.shields.io/pypi/wheel/pymassspec-plot
+	:target: https://pypi.org/project/pymassspec-plot/
 	:alt: PyPI - Wheel
 
 .. |conda-version| image:: https://img.shields.io/conda/v/domdfcoding/PyMassSpec-Plot?logo=anaconda
@@ -112,8 +112,8 @@ PyMassSpec-Plot
 .. |maintained| image:: https://img.shields.io/maintenance/yes/2026
 	:alt: Maintenance
 
-.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/PyMassSpec-Plot
-	:target: https://pypi.org/project/PyMassSpec-Plot/
+.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/pymassspec-plot
+	:target: https://pypistats.org/packages/pymassspec-plot
 	:alt: PyPI - Downloads
 
 .. end shields
@@ -129,7 +129,7 @@ To install with ``pip``:
 
 .. code-block:: bash
 
-	$ python -m pip install PyMassSpec-Plot
+	$ python -m pip install pymassspec-plot
 
 To install with ``conda``:
 
