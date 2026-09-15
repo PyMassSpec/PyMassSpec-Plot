@@ -61,7 +61,7 @@ plot the TIC:
 
 In addition to the TIC, other arguments may be passed to :func:`~pymassspec_plot.plot_ic`.
 These can adjust the line colour or the text of the legend entry. See
-:class:`matplotlib.lines.Line2D`
+https://matplotlib.org/3.1.1/api/\_as_gen/matplotlib.lines.Line2D.html
 for a full list of the possible arguments.
 
 An :class:`~pyms.IonChromatogram.IonChromatogram` can be plotted in the same manner as the TIC in
