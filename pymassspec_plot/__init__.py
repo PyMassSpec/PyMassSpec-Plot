@@ -79,7 +79,7 @@ def plot_ic(  # noqa: PRM002
 
 		.. code-block:: python
 
-			>>> plot_ic(im.get_ic_at_index(5), label='IC @ Index 5', linewidth=2)
+			>>> plot_ic(im.get_ic_at_index(5), label="IC @ Index 5", linewidth=2)
 
 		See :class:`matplotlib.lines.Line2D` for the list of possible keyword arguments.
 
